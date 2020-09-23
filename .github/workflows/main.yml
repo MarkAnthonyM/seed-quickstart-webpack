@@ -46,9 +46,9 @@ jobs:
         if: github.ref == 'refs/heads/master'
         env:
           # Test hack
-          NETLIFY_SITE_ID: ${ { secrets.NETLIFY_SITE_ID }}
+          NETLIFY_SITE_ID: {{ "${{ secrets.NETLIFY_SITE_ID " }}}}
           # Test hack
-          NETLIFY_ACCESS_TOKEN: ${ { secrets.NETLIFY_ACCESS_TOKEN }}
+          NETLIFY_ACCESS_TOKEN: {{ "${{ secrets.NETLIFY_ACCESS_TOKEN " }}}}
         run: sudo netlify deploy -s $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN -p --dir ./dist
 
 
