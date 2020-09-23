@@ -1,2 +1,2 @@
 [template]
-exclude = ["favicons/*.png"]
+exclude = ["favicons/*"]
